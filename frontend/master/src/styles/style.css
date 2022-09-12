@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@100;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Exo", sans-serif;
+  font-weight: 500;
+}
+
+body, .root, .wrapper {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 813px;
+}
+.header__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+  width: 100%;
+  height: 813px;
+}
+.header__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 732px;
+  min-height: 360px;
+  text-align: center;
+}
+.header__title {
+  font-size: 60px;
+  line-height: 75px;
+  font-weight: 100;
+  letter-spacing: 0.04em;
+  color: #282828;
+}
+.header__player {
+  z-index: 9999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 30px;
+  min-width: 80px;
+  min-height: 80px;
+  color: #8d8d8d;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+.header__player:hover {
+  color: #323969;
+}
+.header__btn {
+  margin-top: 30px;
+}
+.header__text {
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: #282828;
+}
+
+.btn {
+  padding: 18px 0;
+  background-color: #ff6d6d;
+  border-radius: 3px;
+  border: 2px solid #ff6d6d;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+.btn a {
+  padding: 18px 48px;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+  text-decoration: none;
+}
+.btn:hover {
+  background: transparent;
+  border: 2px solid #ffffff;
+  scale: 1.1;
+}

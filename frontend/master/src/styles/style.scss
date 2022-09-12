@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@100;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Exo', sans-serif;
+    font-weight: 500;
+}
+body, .root, .wrapper{
+    width: 100%;
+    min-height: 100vh;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    width: 100%;
+    height: 813px;
+    &__video{
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+
+        z-index: -1;
+        width: 100%;
+        height: 813px;
+    }
+    &__box{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        max-width: 732px;
+        min-height: 360px;
+        text-align: center;
+    }
+    &__title{
+        font-size: 60px;
+        line-height: 75px;
+        font-weight: 100;
+        letter-spacing: 0.04em;
+        color: #282828;
+    }
+    &__player{
+        z-index: 9999;
+        display: flex;
+
+        margin-top: 30px;
+        min-width: 80px;
+        min-height: 80px;
+        color: #8d8d8d;
+        cursor: pointer;
+        transition: 0.2s ease;
+        &:hover{
+            color: #323969;
+        }
+    }
+    &__btn{
+        margin-top: 30px;
+    }
+    &__text{
+        margin-top: 20px;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.04em;
+        color: #282828;
+    }
+}
+
+// BUTTON
+
+.btn{
+    padding: 18px 0;
+    background-color: #ff6d6d;
+    border-radius: 3px;
+    border: 2px solid #ff6d6d;
+    transition: 0.2s ease;
+    & a{
+        padding: 18px 48px;
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: #ffffff;
+        text-decoration: none;
+    }
+    &:hover{
+        background: transparent;
+        border: 2px solid #ffffff;
+        scale: 1.1;
+    }
+}
+
+// BUTTON
