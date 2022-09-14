@@ -37,7 +37,7 @@ body, .root, .wrapper {
      object-fit: cover;
   z-index: -1;
   width: 100%;
-  height: 813px;
+  height: 100%;
 }
 .header__box {
   display: -webkit-box;
@@ -62,7 +62,9 @@ body, .root, .wrapper {
   line-height: 75px;
   font-weight: 100;
   letter-spacing: 0.04em;
-  color: #282828;
+  color: #fff;
+  -webkit-animation: header-title 1s linear;
+          animation: header-title 1s linear;
 }
 .header__player {
   z-index: 9999;
@@ -112,4 +114,56 @@ body, .root, .wrapper {
   background: transparent;
   border: 2px solid #ffffff;
   scale: 1.1;
+}
+
+@-webkit-keyframes header-title {
+  0% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+    color: transparent;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    color: #fff;
+  }
+}
+
+@keyframes header-title {
+  0% {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+    color: transparent;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    color: #fff;
+  }
+}
+@media (max-width: 1024px) {
+  .header {
+    height: 600px;
+  }
+}
+@media (max-width: 768px) {
+  .header {
+    height: 700px;
+  }
+  .header__title {
+    font-size: 46px;
+    max-width: 600px;
+    margin: 0px 20px;
+  }
+}
+@media (max-width: 599px) {
+  .header__title {
+    font-size: 32px;
+    max-width: 400px;
+  }
+}
+@media (max-width: 429px) {
+  .header__title {
+    font-size: 28px;
+  }
 }
