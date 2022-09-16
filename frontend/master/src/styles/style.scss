@@ -46,7 +46,7 @@ body, .root, .wrapper{
         font-weight: 100;
         letter-spacing: 0.04em;
         color: #fff;
-        animation: header-title 1s linear;
+        animation: header-title 1s ease-in-out;
     }
     &__player{
         z-index: 9999;
@@ -71,6 +71,56 @@ body, .root, .wrapper{
         font-weight: 400;
         letter-spacing: 0.04em;
         color: #282828;
+    }
+}
+
+.design{
+    display: flex;
+    justify-content: space-between;
+    
+    width: 100%;
+    height: 724px;
+    &__text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 0 32px;
+
+        max-width: 900px;
+        height: 100%;
+    }
+    &__h1{
+        font-size: 32px;
+        line-height: 200%;
+        font-weight: 500;
+        letter-spacing: 0.2em;
+        color: #ff6d6d;
+        text-transform: uppercase;
+    }
+    &__h2{
+        font-size: 54px;
+        line-height: 150%;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        color: #282828;
+    }
+    &__paragraphs{
+        font-size: 16px;
+        line-height: 150%;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        color: #282828;
+        margin-top: 5%;
+    }
+    &__toch{
+        color: #ff6d6d;
+    }
+    &__fon{
+        min-width: 568px;
+        height: 100%;
+        background: url(../fon/design_fon.jpg) no-repeat;
     }
 }
 
@@ -106,7 +156,7 @@ body, .root, .wrapper{
 
 @keyframes header-title{
     0%{
-        transform: translateY(-100px);
+        transform: translateY(-150px);
         color: transparent;
     }
     100%{
@@ -116,12 +166,34 @@ body, .root, .wrapper{
 }
 
 @media (max-width: 1024px) {
+    .design{
+        &__h1{
+            font-size: 16px;
+        }
+        &__h2{
+            font-size: 32px;
+        }
+        &__fon{
+            min-width: 45%;
+        }
+    }
     .header{
         height: 600px;
     }
 }
 
 @media (max-width:768px){
+    .design{
+        position: relative;
+        &__fon{
+            z-index: -1;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-size: cover;
+            min-width: 100%;
+        }
+    }
     .header{
         height: 700px;
         &__title{
@@ -133,13 +205,21 @@ body, .root, .wrapper{
 }
 
 @media (max-width:599px){
+    .design{
+        &__h2{
+            font-size: 24px;
+        }
+        &__paragraphs{
+            font-size: 16px;
+        }
+    }
     .header__title{
         font-size: 32px;
         max-width: 400px;
     }
 }
 
-@media(max-width:429px){
+@media(max-width:425px){
     .header__title{
         font-size: 28px;
     }
