@@ -100,6 +100,7 @@ body, .root, .wrapper {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  overflow: hidden;
   width: 100%;
   height: 724px;
 }
@@ -136,6 +137,14 @@ body, .root, .wrapper {
   font-weight: 600;
   letter-spacing: 0.04em;
   color: #282828;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+.design__h2.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 .design__paragraphs {
   font-size: 16px;
@@ -144,6 +153,14 @@ body, .root, .wrapper {
   letter-spacing: 0.04em;
   color: #282828;
   margin-top: 5%;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-transform: translateX(200%);
+          transform: translateX(200%);
+}
+.design__paragraphs.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 .design__toch {
   color: #ff6d6d;
