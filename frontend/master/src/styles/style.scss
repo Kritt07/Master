@@ -6,6 +6,7 @@
     font-family: 'Exo', sans-serif;
     font-weight: 500;
 }
+
 body, .root, .wrapper{
     width: 100%;
     min-height: 100vh;
@@ -106,7 +107,7 @@ body, .root, .wrapper{
         font-weight: 600;
         letter-spacing: 0.04em;
         color: #282828;
-        transform: translateX(-100%);
+        transform: translateX(-150%);
         transition: 0.8s;
         &.active{
             transform: translateX(0);
@@ -135,7 +136,82 @@ body, .root, .wrapper{
     }
 }
 
+.featur{
+    min-width: 100%;
+    min-height: 675px;
+    background: url('../fon/fon__featur.png') no-repeat;
+    background-size: cover;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__box{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    // &__titles{
+    //     margin-top: 30px;
+    // }
+    &__h1{
+        font-size: 24px;
+        line-height: 49px;
+        font-weight: 500;
+        letter-spacing: 0.2em;
+        color: #ff6d6d;
+    }
+    &__h2{
+        font-size: 40px;
+        line-height: 49px;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        color: #282828;
+    }
+    &__columns{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 90px;
+    }
+    &__column{
+        max-width: 350px;
+        transition: 0.8s;
+        margin: 20px 40px;
+        &.left{
+            transform: translateX(-220%);
+        }
+        &.center{
+            transform: translateY(200%);
+        }
+        &.right{
+            transform: translateX(220%);
+        }
+        &.active{
+            transform: translateX(0);
+        }
+    }
+    &__h3{
+        font-size: 22px;
+        line-height: 49px;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        color: #282828;
+    }
+    &__paragraph{
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        color: #282828;
+    }
+}
+
 // BUTTON
+
+
+
+
 
 .btn{
     padding: 18px 0;
@@ -161,10 +237,6 @@ body, .root, .wrapper{
 
 // BUTTON
 
-
-
-
-
 @keyframes header-title{
     0%{
         transform: translateY(-150px);
@@ -186,6 +258,11 @@ body, .root, .wrapper{
         }
         &__fon{
             min-width: 45%;
+        }
+    }
+    .featur{
+        &__titles{
+            margin-top: 30px;
         }
     }
     .header{

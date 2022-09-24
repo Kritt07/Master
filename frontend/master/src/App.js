@@ -1,5 +1,6 @@
 import React from 'react'
 import Design from './Components/Design'
+import Featur from './Components/Featur'
 import Header from './Components/Header'
 import './styles/style.css'
 
@@ -8,6 +9,7 @@ function App() {
     <div className='wrapper'>
       <Header />
       <Design />
+      <Featur />
     </div>
   )
 }

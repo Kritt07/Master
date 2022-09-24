@@ -137,8 +137,8 @@ body, .root, .wrapper {
   font-weight: 600;
   letter-spacing: 0.04em;
   color: #282828;
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  -webkit-transform: translateX(-150%);
+          transform: translateX(-150%);
   -webkit-transition: 0.8s;
   transition: 0.8s;
 }
@@ -169,6 +169,94 @@ body, .root, .wrapper {
   min-width: 568px;
   height: 100%;
   background: url(../fon/design_fon.jpg) no-repeat;
+}
+
+.featur {
+  min-width: 100%;
+  min-height: 675px;
+  background: url("../fon/fon__featur.png") no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.featur__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+.featur__h1 {
+  font-size: 24px;
+  line-height: 49px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: #ff6d6d;
+}
+.featur__h2 {
+  font-size: 40px;
+  line-height: 49px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #282828;
+}
+.featur__columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 90px;
+}
+.featur__column {
+  max-width: 350px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  margin: 20px 40px;
+}
+.featur__column.left {
+  -webkit-transform: translateX(-220%);
+          transform: translateX(-220%);
+}
+.featur__column.center {
+  -webkit-transform: translateY(200%);
+          transform: translateY(200%);
+}
+.featur__column.right {
+  -webkit-transform: translateX(220%);
+          transform: translateX(220%);
+}
+.featur__column.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+.featur__h3 {
+  font-size: 22px;
+  line-height: 49px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #282828;
+}
+.featur__paragraph {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #282828;
 }
 
 .btn {
@@ -228,6 +316,10 @@ body, .root, .wrapper {
   }
   .design__fon {
     min-width: 45%;
+  }
+
+  .featur__titles {
+    margin-top: 30px;
   }
 
   .header {
