@@ -1,10 +1,50 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+import {IoIosArrowBack} from 'react-icons/io'
+import {MdOutlineNavigateNext} from 'react-icons/md'
 
 function Notebook() {
+  const [position, setPosition] = useState(0)
+  const item1 = useRef(null) 
+  const item2 = useRef(null)
+  const item3 = useRef(null)
+  const item4 = useRef(null)
+  const item5 = useRef(null)
+
+
+  const nextHulder = () => {
+   if(position >= 4) {
+    setPosition(position)
+   }else{
+    setPosition(position + 1)
+   }
+  }
+  const backHulder = () => {
+    if(position <= 0) {
+      setPosition(position)
+     }else{
+      setPosition(position - 1)
+     }
+  }
+  useEffect(() => {
+    item1.current.style.transform = `translate(${-position * 100}%)`
+    item2.current.style.transform = `translate(${-position * 100}%)`
+    item3.current.style.transform = `translate(${-position * 100}%)`
+    item4.current.style.transform = `translate(${-position * 100}%)`
+    item5.current.style.transform = `translate(${-position * 100}%)`
+  })
+
   return (
     <div className='note'>
         <div className='note__book'>
-
+          <div className='note__window'>
+            <button onClick={backHulder} name='back' className='note__button back'><IoIosArrowBack /></button>
+            <div ref={item1} className='note__item i1'></div>
+            <div ref={item2} className='note__item i2'></div>
+            <div ref={item3} className='note__item i3'></div>
+            <div ref={item4} className='note__item i4'></div>
+            <div ref={item5} className='note__item i5'></div>
+            <button onClick={nextHulder} name='next' className='note__button next'><MdOutlineNavigateNext /></button>
+          </div>
         </div>
         <div className='note__text'>
             <h1 className='note__h1 h1'>NEW DESIGN</h1>
