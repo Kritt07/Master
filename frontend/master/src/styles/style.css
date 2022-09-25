@@ -123,47 +123,21 @@ body, .root, .wrapper {
   max-width: 900px;
   height: 100%;
 }
-.design__h1 {
-  font-size: 32px;
-  line-height: 200%;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  color: #ff6d6d;
-  text-transform: uppercase;
-}
 .design__h2 {
-  font-size: 54px;
-  line-height: 150%;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  color: #282828;
   -webkit-transform: translateX(-150%);
           transform: translateX(-150%);
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
 }
 .design__h2.active {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 .design__paragraphs {
-  font-size: 16px;
-  line-height: 150%;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  color: #282828;
-  margin-top: 5%;
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
   -webkit-transform: translateX(200%);
           transform: translateX(200%);
 }
 .design__paragraphs.active {
   -webkit-transform: translateX(0);
           transform: translateX(0);
-}
-.design__toch {
-  color: #ff6d6d;
 }
 .design__fon {
   min-width: 568px;
@@ -259,6 +233,62 @@ body, .root, .wrapper {
   color: #282828;
 }
 
+.note {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  min-height: 550px;
+}
+.note__book {
+  min-width: 730px;
+  min-height: 407px;
+  background: url("../fon/macbook.png") no-repeat;
+  background-size: cover;
+}
+.note__text {
+  max-width: 700px;
+}
+
+.p {
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #282828;
+  margin-top: 5%;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.h2 {
+  font-size: 54px;
+  line-height: 150%;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #282828;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.h1 {
+  font-size: 24px;
+  line-height: 200%;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: #ff6d6d;
+  text-transform: uppercase;
+}
+
+.toch {
+  color: #ff6d6d;
+}
+
 .btn {
   padding: 18px 0;
   background-color: #ff6d6d;
@@ -307,6 +337,18 @@ body, .root, .wrapper {
     color: #fff;
   }
 }
+@media (max-width: 1200px) {
+  .note__h2 {
+    font-size: 32px;
+  }
+  .note__p {
+    letter-spacing: 0.004em;
+  }
+  .note__book {
+    min-width: 630px;
+    min-height: 367px;
+  }
+}
 @media (max-width: 1024px) {
   .design__h1 {
     font-size: 16px;
@@ -324,6 +366,23 @@ body, .root, .wrapper {
 
   .header {
     height: 600px;
+  }
+
+  .note {
+    min-height: 450px;
+  }
+  .note__h1 {
+    font-size: 16px;
+  }
+  .note__h2 {
+    font-size: 24px;
+  }
+  .note__p {
+    font-size: 12px;
+  }
+  .note__book {
+    min-width: 530px;
+    min-height: 307px;
   }
 }
 @media (max-width: 768px) {
@@ -347,6 +406,32 @@ body, .root, .wrapper {
     max-width: 600px;
     margin: 0px 20px;
   }
+
+  .note {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .note__text {
+    margin: 0 20px;
+  }
+  .note__h1 {
+    font-size: 24px;
+  }
+  .note__h2 {
+    font-size: 32px;
+  }
+  .note__p {
+    font-size: 16px;
+    letter-spacing: 0.04em;
+  }
 }
 @media (max-width: 599px) {
   .design__h2 {
@@ -360,9 +445,28 @@ body, .root, .wrapper {
     font-size: 32px;
     max-width: 400px;
   }
+
+  .note__h1 {
+    font-size: 16px;
+  }
+  .note__h2 {
+    font-size: 24px;
+  }
+  .note__p {
+    font-size: 12px;
+  }
+  .note__book {
+    min-width: 400px;
+    min-height: 230px;
+  }
 }
 @media (max-width: 425px) {
   .header__title {
     font-size: 28px;
+  }
+
+  .note__book {
+    min-width: 320px;
+    min-height: 180px;
   }
 }

@@ -93,41 +93,17 @@ body, .root, .wrapper{
         max-width: 900px;
         height: 100%;
     }
-    &__h1{
-        font-size: 32px;
-        line-height: 200%;
-        font-weight: 500;
-        letter-spacing: 0.2em;
-        color: #ff6d6d;
-        text-transform: uppercase;
-    }
     &__h2{
-        font-size: 54px;
-        line-height: 150%;
-        font-weight: 600;
-        letter-spacing: 0.04em;
-        color: #282828;
         transform: translateX(-150%);
-        transition: 0.8s;
         &.active{
             transform: translateX(0);
         }
     }
     &__paragraphs{
-        font-size: 16px;
-        line-height: 150%;
-        font-weight: 500;
-        letter-spacing: 0.04em;
-        color: #282828;
-        margin-top: 5%;
-        transition: 0.8s;
         transform: translateX(200%);
         &.active{
             transform: translateX(0);
         }
-    }
-    &__toch{
-        color: #ff6d6d;
     }
     &__fon{
         min-width: 568px;
@@ -151,9 +127,6 @@ body, .root, .wrapper{
         flex-direction: column;
         text-align: center;
     }
-    // &__titles{
-    //     margin-top: 30px;
-    // }
     &__h1{
         font-size: 24px;
         line-height: 49px;
@@ -207,11 +180,63 @@ body, .root, .wrapper{
     }
 }
 
+.note{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 100%;
+    min-height: 550px;
+    &__book{
+        // margin-left: 100px;
+        min-width: 730px;
+        min-height: 407px;
+
+        background: url('../fon/macbook.png') no-repeat;
+        background-size: cover;
+    }
+    &__text{
+        max-width: 700px;
+        // margin-right: 200px;
+    }
+}
+
+
+
+
+
+.p{
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: #282828;
+    margin-top: 5%;
+    transition: 0.8s;
+}
+.h2{
+    font-size: 54px;
+    line-height: 150%;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: #282828;
+    transition: 0.8s;
+}
+.h1{
+    font-size: 24px;
+    line-height: 200%;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    color: #ff6d6d;
+    text-transform: uppercase;
+}
+.toch{
+    color: #ff6d6d;
+}
+
+
+
 // BUTTON
-
-
-
-
 
 .btn{
     padding: 18px 0;
@@ -237,6 +262,9 @@ body, .root, .wrapper{
 
 // BUTTON
 
+
+
+
 @keyframes header-title{
     0%{
         transform: translateY(-150px);
@@ -245,6 +273,21 @@ body, .root, .wrapper{
     100%{
         transform: translateY(0px);
         color: #fff;
+    }
+}
+
+@media (max-width: 1200px){
+    .note{
+        &__h2{
+            font-size: 32px;
+        }
+        &__p{
+            letter-spacing: 0.004em;
+        }
+        &__book{
+            min-width: 630px;
+            min-height: 367px;
+        }
     }
 }
 
@@ -268,6 +311,22 @@ body, .root, .wrapper{
     .header{
         height: 600px;
     }
+    .note{
+        min-height: 450px;
+        &__h1{
+            font-size: 16px;
+        }
+        &__h2{
+            font-size: 24px;
+        }
+        &__p{
+            font-size: 12px;
+        }
+        &__book{
+            min-width: 530px;
+            min-height: 307px;
+        }
+    }
 }
 
 @media (max-width:768px){
@@ -290,6 +349,24 @@ body, .root, .wrapper{
             margin: 0px 20px;
         }
     }
+    .note{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        &__text{
+            margin: 0 20px;
+        }
+        &__h1{
+            font-size: 24px;
+        }
+        &__h2{
+            font-size: 32px;
+        }
+        &__p{
+            font-size: 16px;
+            letter-spacing: 0.04em;
+        }
+    }
 }
 
 @media (max-width:599px){
@@ -305,10 +382,31 @@ body, .root, .wrapper{
         font-size: 32px;
         max-width: 400px;
     }
+    .note{
+        &__h1{
+            font-size: 16px;
+        }
+        &__h2{
+            font-size: 24px;
+        }
+        &__p{
+            font-size: 12px;
+        }
+        &__book{
+            min-width: 400px;
+            min-height: 230px;
+        }
+    }
 }
 
 @media(max-width:425px){
     .header__title{
         font-size: 28px;
+    }
+    .note{
+        &__book{
+            min-width: 320px;
+            min-height: 180px;
+        }
     }
 }
