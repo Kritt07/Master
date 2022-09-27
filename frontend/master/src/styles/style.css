@@ -244,12 +244,30 @@ body, .root, .wrapper {
       justify-content: space-around;
   width: 100%;
   min-height: 550px;
+  overflow: hidden;
+}
+.note__h2 {
+  -webkit-transform: translateX(200%);
+          transform: translateX(200%);
+}
+.note__h2.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+.note__p {
+  -webkit-transform: translateY(300%);
+          transform: translateY(300%);
+}
+.note__p.active {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
 }
 .note__book {
   min-width: 730px;
   min-height: 407px;
   background: url("../fon/macbook.png") no-repeat;
   background-size: cover;
+  overflow: hidden;
 }
 .note__text {
   max-width: 700px;
@@ -264,6 +282,14 @@ body, .root, .wrapper {
   min-height: 325px;
   background-color: rgba(255, 94, 94, 0.4941176471);
   margin: 5% auto;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+}
+.note__window.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 .note__item {
   min-width: 100%;
@@ -296,6 +322,11 @@ body, .root, .wrapper {
   color: #fff;
   z-index: 1;
   cursor: pointer;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+.note__button:hover {
+  scale: 1.2;
 }
 .note__button.next {
   top: 50%;
