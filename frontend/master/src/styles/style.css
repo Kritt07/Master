@@ -339,6 +339,207 @@ body, .root, .wrapper {
   left: 10px;
 }
 
+.employee {
+  background: url("../fon/_employee__fon.png") no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  min-height: 650px;
+}
+.employee__columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1280px;
+  padding-top: 120px;
+}
+.employee__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transform: translateY(20%);
+          transform: translateY(20%);
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  opacity: 0;
+  text-align: center;
+  margin: 10px 30px;
+  max-width: 350px;
+}
+.employee__column.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+.employee__img {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background-color: #4e4e5e;
+  border: 2px solid #1d1e24;
+}
+.employee__img img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 80px;
+  height: 80px;
+}
+.employee__h1 {
+  font-size: 22px;
+  line-height: 49px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+}
+.employee__h2 {
+  font-size: 16px;
+  line-height: 49px;
+  font-weight: 500;
+  color: #ff6d6d;
+}
+.employee__text {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  opacity: 0.65;
+}
+.employee__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 80px auto 50px auto;
+  max-width: 1000px;
+}
+.employee__icon {
+  margin: 10px 30px;
+  max-width: 130px;
+  max-height: 65px;
+}
+.employee__icon img {
+  max-width: 130px;
+  max-height: 65px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.awesome {
+  width: 100%;
+  min-height: 754px;
+  background-color: #f6f5f3;
+  overflow: hidden;
+}
+.awesome__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  -webkit-transform: translateY(10%);
+          transform: translateY(10%);
+  opacity: 0;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+.awesome__text.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+.awesome__h1 {
+  font-size: 24px;
+  line-height: 49px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: #ff6d6d;
+}
+.awesome__h2 {
+  font-size: 48px;
+  line-height: 49px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #282828;
+  margin-bottom: 40px;
+}
+.awesome__p {
+  opacity: 0.65;
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #282828;
+}
+.awesome__window {
+  max-width: 768px;
+  min-height: 322px;
+  margin: 0 auto;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  background: url("../fon/display.png") no-repeat;
+  background-size: cover;
+}
+.awesome__window.active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
 .p {
   font-size: 16px;
   line-height: 150%;
