@@ -33,7 +33,6 @@ function Notebook() {
     item4.current.style.transform = `translate(${-position * 100}%)`
     item5.current.style.transform = `translate(${-position * 100}%)`
   })
-  console.log(window.scrollY);
 
   return (
     <div className='note'>

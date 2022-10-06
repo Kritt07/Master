@@ -5,6 +5,7 @@ import Employee from './Components/Employee'
 import Featur from './Components/Featur'
 import Header from './Components/Header'
 import Notebook from './Components/Notebook'
+import Started from './Components/Started'
 import './styles/style.css'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Notebook />
       <Employee />
       <Awesome />
+      <Started />
     </div>
   )
 }
